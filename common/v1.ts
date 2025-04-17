@@ -1,5 +1,7 @@
 export type APIPayloadStatus = "error" | "success";
 
+export type SnowFlake = string;
+
 export interface APIPayload<TResponse> {
 	status: APIPayloadStatus;
 	response: TResponse;

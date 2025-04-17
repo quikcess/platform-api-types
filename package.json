@@ -48,12 +48,12 @@
 	],
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/quikcess/bet-api-types.git"
+		"url": "git+https://github.com/quikcess/platform-api-types.git"
 	},
-	"keywords": ["quikcess", "api", "bet", "bet api", "types"],
+	"keywords": ["quikcess", "api", "platform", "platform api", "types"],
 	"author": "Eydrenn Araujo",
 	"bugs": {
-		"url": "https://github.com/quikcess/bet-api-types/issues"
+		"url": "https://github.com/quikcess/platform-api-types/issues"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.9.4",

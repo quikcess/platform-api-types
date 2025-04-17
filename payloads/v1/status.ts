@@ -1,18 +1,18 @@
 /**
  * @see https://docs.quikcess.com/platform/api-reference/endpoint/status
  */
-export type APIStatusType = "healthy" | "degraded" | "unknown";
-export const APIStatusType = {
+export type StatusType = "healthy" | "degraded" | "unknown";
+export const StatusType = {
 	Healthy: "healthy",
 	Degraded: "degraded",
 	Unknown: "unknown",
-};
+} as const;
 
 /**
  * @see https://docs.quikcess.com/platform/api-reference/endpoint/status
  */
-export type APIServicesType = "up" | "down" | "unknown";
-export const APIServicesType = {
+export type ServicesType = "up" | "down" | "unknown";
+export const ServicesType = {
 	UP: "up",
 	DOWN: "down",
 	Unknown: "unknown",
@@ -23,11 +23,15 @@ export const APIServicesType = {
  */
 export interface APIStatusServices {
 	database: {
-		status: APIServicesType;
+		status: ServicesType;
 		ping: number;
 	};
 	cache: {
-		status: APIServicesType;
+		status: ServicesType;
+		ping: number;
+	};
+	cdn: {
+		status: ServicesType;
 		ping: number;
 	};
 }
@@ -36,7 +40,7 @@ export interface APIStatusServices {
  * @see https://docs.quikcess.com/platform/api-reference/endpoint/status
  */
 export interface APIStatus {
-	status: APIStatusType;
+	status: StatusType;
 	ping: number;
 	services: APIStatusServices;
 	uptime: number | null;
