@@ -5,7 +5,10 @@ import type { ISODateString, SnowFlake } from "../../../v1";
  */
 export interface APIGuildRole {
 	id: SnowFlake;
+	guild_id: string;
 	name: string;
+	color: string; // hex
+	position: number;
 	permissions: number; // bitfield
 	created_at: ISODateString;
 	updated_at: ISODateString;

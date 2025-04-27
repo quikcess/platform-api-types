@@ -1,5 +1,5 @@
 import type { ISODateString, SnowFlake } from "../../v1";
-import type { APIGuildMember } from "./guild/member";
+import type { APIGuildMember } from "./guild/members";
 
 /**
  * @see https://docs.quikcess.com/platform/api-reference/endpoint/messages
